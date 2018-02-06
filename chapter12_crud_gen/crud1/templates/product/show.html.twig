@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Product SHOW page</h1>
+
+    <p>
+        id = {{ product.id }}
+        <br>
+        description = {{ product.description }}
+        <br>
+        price = &euro; {{ product.price }}
+        <br>
+        category = {{ product.category.name }}
+    </p>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ url('homepage') }}">home</a>
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}">list of products</a>
+            </li>
+        </ul>
+    </nav>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

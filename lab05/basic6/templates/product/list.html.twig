@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Product LIST page</h1>
+
+    <ul>
+        {% for product in products %}
+            <li>
+                id = {{ product.id }}
+                <br>
+                description = {{ product.description }}
+                <br>
+                price = &euro; {{ product.price }}
+                <br>
+                <a href="{{ url('product_show', {id : product.id} ) }}">(details)</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

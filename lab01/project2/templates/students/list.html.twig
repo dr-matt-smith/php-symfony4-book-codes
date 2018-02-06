@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>
+    hello world from the home page
+</h1>
+
+hi to:
+
+<ul>
+
+    {% for student in students %}
+        <li>
+            id = {{ student.id }}
+            <br>
+            firstName = {{ student.firstName }}
+            <br>
+            surname = {{ student.surname }}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

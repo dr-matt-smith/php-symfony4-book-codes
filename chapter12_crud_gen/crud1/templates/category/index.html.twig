@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <style>
+        @import "/css/table.css";
+    </style>
+{% endblock%}
+
+{% block body %}
+    <h1>Category index</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+                        <th>actions</th>
+        </tr>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                                <td>
+                    <a href="{{ path('category_show', {'id':category.id}) }}">show</a>
+                    <a href="{{ path('category_edit', {'id':category.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path('category_new') }}">Create new</a>
+{% endblock %}
