@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Student{% endblock %}
+
+{% block body %}
+    <h1>Create new Student</h1>
+
+    {% include 'student/_form.html.twig' with {'form': form} only %}
+
+{% endblock %}

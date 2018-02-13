@@ -30,13 +30,13 @@ class CategoryController extends Controller
     }
 
     /**
-    * @Route("/new", name="new")
-    * @Method({"GET", "POST"})
-    *
-    * @param Request $request
-    *
-    * @return Response
-    */
+     * @Route("/new", name="new")
+     * @Method({"GET", "POST"})
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
     public function new(Request $request)
     {
         $category = new Category();
@@ -56,7 +56,6 @@ class CategoryController extends Controller
             'form' => $form->createView(),
         ]);
     }
-
     /**
      * @Route("/{id}", name="show")
      * @Method("GET")
@@ -120,11 +119,27 @@ class CategoryController extends Controller
         $form = $this->createDeleteForm($category);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($category);
-            $em->flush();
-        }
+//        if ($request->isMethod('DELETE')) {
+//            $form->submit($request->request->get($form->getName()));
+
+            if ($form->isSubmitted() && $form->isValid()) {
+
+                try
+                {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->remove($category);
+                    $em->flush();
+
+                } catch(\Doctrine\DBAL\Exception\ForeignKeyConstraintViolationException $e)
+                {
+                    return new Response('could not delete record - would violate foreign key constrain ...');
+                } catch (Symfony\Component\HttpKernel\Exception\NotFoundHttpExceptionn $e)
+                {
+                    return new Response('could not delete record - no record with that ID.');
+
+                }
+            }
+//        }
 
         return $this->redirectToRoute('category_index');
     }

@@ -9,9 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/default", name="default")
+     * @Route("/", name="homepage")
      */
-    public function index()
+    public function indexAction()
     {
         return new Response('Welcome to your new controller!');
     }
