@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <style>
+            @import '/css/flash.css';
+            @import '/css/highlight.css';
+        </style>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ url('student_list') }}">student list</a>
+            </li>
+        </ul>
+    </nav>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

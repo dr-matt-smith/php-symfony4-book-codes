@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+    {% block pageTitle %}new student form{% endblock %}
+
+    {% block body %}
+        {% for flash_message in app.session.flashBag.get('error') %}
+            <div class="flash-error">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
+
+        <h1>Create new student</h1>
+
+        <form action="/student/new" method="POST">
+                First Name:
+                <input type="text" name="firstName" value="{{ firstName }}">
+            <p>
+                Surname:
+                <input type="text" name="surname" value="{{ surname }}">
+            <p>
+                <input type="submit" value="Create new student">
+        </form>
+    {% endblock %}
