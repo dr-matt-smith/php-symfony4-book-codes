@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+    {% block pageTitle %}new student form{% endblock %}
+
+    {% block body %}
+        {% for flash_message in app.session.flashBag.get('error') %}
+            <div class="flash-error">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
+
+        <h1>Create new student</h1>
+        {{ form(form) }}
+    {% endblock %}
