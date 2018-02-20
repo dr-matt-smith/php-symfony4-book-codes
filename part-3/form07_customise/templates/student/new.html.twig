@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+    {% block pageTitle %}new student form{% endblock %}
+
+
+
+    {% block body %}
+        <h1>Create new student</h1>
+        {{ form_start(form) }}
+
+        <div>
+            <div class="errors">
+                {{ form_errors(form.firstName) }}
+            </div>
+
+            {{ form_label(form.firstName) }}
+
+            {{ form_widget(form.firstName) }}
+        </div>
+
+        <div>
+            <div class="errors">
+                {{ form_errors(form.surname) }}
+            </div>
+
+            {{ form_label(form.surname) }}
+
+            {{ form_widget(form.surname) }}
+        </div>
+
+        <div>
+            {{ form_row(form.save) }}
+        </div>
+
+        {{ form_end(form) }}
+    {% endblock %}

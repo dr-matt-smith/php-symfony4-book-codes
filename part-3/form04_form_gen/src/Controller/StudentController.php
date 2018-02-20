@@ -26,8 +26,6 @@ class StudentController extends Controller
             ->add('surname', TextType::class)
             ->add('save', SubmitType::class, array('label' => 'Create Student'))->getForm();
 
-//        $form = $this->createForm(CategoryType::class, $category);
-
         // if was POST submission, extract data and put into '$student'
         $form->handleRequest($request);
 
@@ -35,16 +33,6 @@ class StudentController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             return $this->createAction($student);
         }
-//
-//
-//        // if submitted and NOT valid, add a FLASH ERROR message
-//        if ($form->isSubmitted() ) {
-//            $this->addFlash(
-//                'error',
-//                'form was submitted'
-//            );
-//        }
-
 
         // render the form for the user
         $template = 'student/new.html.twig';
