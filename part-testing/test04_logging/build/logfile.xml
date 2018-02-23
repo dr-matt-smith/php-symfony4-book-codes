@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="6" assertions="6" failures="0" errors="0" time="0.005594">
+    <testsuite name="App\Test\SimpleTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test04_coverage/tests/SimpleTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.002634">
+      <testcase name="testOnePlusOneEqualsTwo" class="App\Test\SimpleTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test04_coverage/tests/SimpleTest.php" line="9" assertions="1" time="0.002634"/>
+    </testsuite>
+    <testsuite name="App\Util\Test\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test04_coverage/tests/Util/CalculatorTest.php" tests="5" assertions="5" failures="0" errors="0" time="0.002960">
+      <testcase name="testCanCreateObject" class="App\Util\Test\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test04_coverage/tests/Util/CalculatorTest.php" line="10" assertions="1" time="0.002021"/>
+      <testcase name="testAddOneAndOne" class="App\Util\Test\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test04_coverage/tests/Util/CalculatorTest.php" line="21" assertions="1" time="0.000251"/>
+      <testsuite name="App\Util\Test\CalculatorTest::testAdditionsWithProvider" tests="3" assertions="3" failures="0" errors="0" time="0.000688">
+        <testcase name="testAdditionsWithProvider with data set #0" assertions="1" time="0.000234"/>
+        <testcase name="testAdditionsWithProvider with data set #1" assertions="1" time="0.000241"/>
+        <testcase name="testAdditionsWithProvider with data set #2" assertions="1" time="0.000213"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

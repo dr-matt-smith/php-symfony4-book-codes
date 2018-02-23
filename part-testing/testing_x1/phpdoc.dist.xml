@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <!-- OUTPUT directory -->
+    <parser>
+        <target>docs</target>
+    </parser>
+
+    <!-- OUTPUT directory -->
+    <transformer>
+        <target>docs</target>
+    </transformer>
+
+    <!-- Source Code directories -->
+    <files>
+        <directory>src/Controller</directory>
+        <directory>src/Entity</directory>
+    </files>
+
+    <!-- style of output -->
+    <transformations>
+        <template name="responsive-twig"/>
+    </transformations>
+</phpdoc>

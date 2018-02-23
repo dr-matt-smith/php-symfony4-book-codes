@@ -1,0 +1,5 @@
+App\Tests\Controller\DefaultController
+ [ ] Homepage says hello with html filter
+ [x] Homepage says hello
+ [x] Public urls 
+

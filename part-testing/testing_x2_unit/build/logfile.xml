@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="3" assertions="2" failures="0" errors="1" time="2.002110">
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing02_unit/tests/Controller/DefaultControllerTest.php" tests="3" assertions="2" failures="0" errors="1" time="2.002110">
+      <testcase name="testHomepageSaysHelloWithHtmlFilter" class="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing02_unit/tests/Controller/DefaultControllerTest.php" line="37" assertions="0" time="1.942225">
+        <error type="RuntimeException">App\Tests\Controller\DefaultControllerTest::testHomepageSaysHelloWithHtmlFilter
+RuntimeException: To filter with a CSS selector, install the CssSelector component ("composer require symfony/css-selector"). Or use filterXpath instead.
+
+/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing02_unit/vendor/symfony/dom-crawler/Crawler.php:695
+/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing02_unit/tests/Controller/DefaultControllerTest.php:51
+</error>
+      </testcase>
+      <testcase name="testHomepageSaysHello" class="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing02_unit/tests/Controller/DefaultControllerTest.php" line="55" assertions="1" time="0.026818"/>
+      <testsuite name="App\Tests\Controller\DefaultControllerTest::testPublicUrls" tests="1" assertions="1" failures="0" errors="0" time="0.033067">
+        <testcase name="testPublicUrls with data set #0" assertions="1" time="0.033067"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

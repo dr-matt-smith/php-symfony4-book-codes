@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="4" assertions="4" failures="0" errors="0" time="1.110668">
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing01/tests/Controller/DefaultControllerTest.php" tests="3" assertions="3" failures="0" errors="0" time="1.102973">
+      <testcase name="testHomepageSaysHelloWithHtmlFilter" class="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing01/tests/Controller/DefaultControllerTest.php" line="37" assertions="1" time="0.601158"/>
+      <testcase name="testHomepageSaysHello" class="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing01/tests/Controller/DefaultControllerTest.php" line="55" assertions="1" time="0.248370"/>
+      <testsuite name="App\Tests\Controller\DefaultControllerTest::testPublicUrls" tests="1" assertions="1" failures="0" errors="0" time="0.253445">
+        <testcase name="testPublicUrls with data set #0" assertions="1" time="0.253445"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Util\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing01/tests/Util/CalculatorTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.007695">
+      <testcase name="testAdd" class="App\Tests\Util\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/testing01/tests/Util/CalculatorTest.php" line="9" assertions="1" time="0.007695"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
