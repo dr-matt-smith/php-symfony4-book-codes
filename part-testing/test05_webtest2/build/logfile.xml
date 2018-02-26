@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="8" assertions="8" failures="0" errors="0" time="0.085376">
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/Controller/DefaultControllerTest.php" tests="2" assertions="2" failures="0" errors="0" time="0.083373">
+      <testcase name="testHomepageResponseCodeOkay" class="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/Controller/DefaultControllerTest.php" line="10" assertions="1" time="0.075694"/>
+      <testcase name="testHomepageContentContainsHelloWorld" class="App\Tests\Controller\DefaultControllerTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/Controller/DefaultControllerTest.php" line="28" assertions="1" time="0.007679"/>
+    </testsuite>
+    <testsuite name="App\Test\SimpleTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/SimpleTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.000556">
+      <testcase name="testOnePlusOneEqualsTwo" class="App\Test\SimpleTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/SimpleTest.php" line="9" assertions="1" time="0.000556"/>
+    </testsuite>
+    <testsuite name="App\Util\Test\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/Util/CalculatorTest.php" tests="5" assertions="5" failures="0" errors="0" time="0.001447">
+      <testcase name="testCanCreateObject" class="App\Util\Test\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/Util/CalculatorTest.php" line="10" assertions="1" time="0.000673"/>
+      <testcase name="testAddOneAndOne" class="App\Util\Test\CalculatorTest" file="/Users/matt/Library/Mobile Documents/com~apple~CloudDocs/11_Books/symfony/php-symfony4-book-codes/part-testing/test05_webtestcase/tests/Util/CalculatorTest.php" line="21" assertions="1" time="0.000202"/>
+      <testsuite name="App\Util\Test\CalculatorTest::testAdditionsWithProvider" tests="3" assertions="3" failures="0" errors="0" time="0.000572">
+        <testcase name="testAdditionsWithProvider with data set #0" assertions="1" time="0.000191"/>
+        <testcase name="testAdditionsWithProvider with data set #1" assertions="1" time="0.000195"/>
+        <testcase name="testAdditionsWithProvider with data set #2" assertions="1" time="0.000186"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
