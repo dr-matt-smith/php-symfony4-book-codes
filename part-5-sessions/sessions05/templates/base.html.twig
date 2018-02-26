@@ -1,0 +1,44 @@
+
+{# ------ assume using values from session ---- #}
+{% set default_colours = false %}
+
+{# ------ attempt to read 'colours' from session ----- #}
+{% set colours = app.session.get('colours') %}
+
+{# ------ if 'null' then no found in session ----- #}
+{% if colours is null %}
+    {# ------ set default flag to TRUE ----- #}
+    {% set default_colours = true %}
+
+    {# ------ set our default colours array ----- #}
+    {% set colours = {
+        'foreground': 'black',
+        'background': 'white'
+    }
+    %}
+{% endif %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <style>
+            body {
+                color: {{ colours['foreground'] }};
+                background-color: {{ colours['background'] }};
+            }
+        </style>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        <hr>
+        <hr>
+        {{ dump(app.session) }}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

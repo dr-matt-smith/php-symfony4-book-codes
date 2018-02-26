@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {# ------ assume using values from session ---- #}
+    {% set default_colours = false %}
+
+    {# ------ attempt to read 'colours' from session ----- #}
+    {% set colours = app.session.get('colours') %}
+
+    {# ------ if 'null' then no found in session ----- #}
+    {% if colours is null %}
+        {# ------ set default flag to TRUE ----- #}
+        {% set default_colours = true %}
+
+        {# ------ set our default colours array ----- #}
+        {% set colours = {
+            'foreground': 'black',
+            'background': 'white'
+        }
+        %}
+    {% endif %}
+
+
+<p>
+    Hello World
+</p>
+
+    <p>
+        using default colours =
+        {% if default_colours %}
+            yes
+        {% else %}
+            no
+        {% endif %}
+    </p>
+    <ul>
+        {% for property, colour in colours %}
+            <li>
+                {{ property }} = {{ colour }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

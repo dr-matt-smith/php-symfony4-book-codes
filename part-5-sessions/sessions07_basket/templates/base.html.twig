@@ -1,0 +1,48 @@
+
+{# ------ assume using values from session ---- #}
+{% set default_colours = false %}
+
+{# ------ attempt to read 'colours' from session ----- #}
+{% set colours = app.session.get('colours') %}
+
+{# ------ if 'null' then no found in session ----- #}
+{% if colours is null %}
+    {# ------ set default flag to TRUE ----- #}
+    {% set default_colours = true %}
+
+    {# ------ set our default colours array ----- #}
+    {% set colours = {
+        'foreground': 'black',
+        'background': 'white'
+    }
+    %}
+{% endif %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ url('default') }}">home</a>
+            </li>
+            <li>
+                <a href="{{ url('product_index') }}">list of products</a>
+            </li>
+            <li>
+                <a href="{{ url('basket_index') }}">basket</a>
+            </li>
+        </ul>
+    </nav>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
