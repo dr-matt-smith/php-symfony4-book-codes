@@ -29,15 +29,68 @@ class User implements UserInterface, \Serializable
     private $password;
 
     /**
+     * @ORM\Column(type="string", length=60, unique=true)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(name="is_active", type="boolean")
+     */
+    private $isActive;
+
+
+    /**
      * @ORM\Column(type="json_array")
      */
     private $roles = [];
 
+    public function getRoles()
+    {
+        $roles = $this->roles;
+        // ensure always contains ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    /**
+     * Set roles
+     *
+     * @param array $roles *
+     * @return User
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+        return $this;
+    }
+
+
+
+    public function __construct()
+    {
+        $this->isActive = true;
+        // may not be needed, see section on salt below
+        // $this->salt = md5(uniqid('', true));
+    }
+
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
     public function getSalt()
     {
-        // no salt needed since we are using bcrypt
+        // you *may* need a real salt depending on your encoder
+        // see section on salt below
         return null;
     }
+
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
 
     public function eraseCredentials()
     {
@@ -67,28 +120,6 @@ class User implements UserInterface, \Serializable
             ) = unserialize($serialized);
     }
 
-    public function getRoles()
-    {
-        $roles = $this->roles;
-        // ensure always contains ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
-    }
-
-    /**
-     * Set roles
-     *
-     * @param array $roles *
-     * @return User
-     */
-    public function setRoles($roles)
-    {
-        $this->roles = $roles;
-        return $this;
-    }
-
-
     /**
      * @return mixed
      */
@@ -108,9 +139,33 @@ class User implements UserInterface, \Serializable
     /**
      * @return mixed
      */
-    public function getUsername()
+    public function getEmail()
     {
-        return $this->username;
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * @param mixed $isActive
+     */
+    public function setIsActive($isActive): void
+    {
+        $this->isActive = $isActive;
     }
 
     /**
@@ -122,21 +177,12 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * @return mixed
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
      * @param mixed $password
      */
     public function setPassword($password): void
     {
         $this->password = $password;
     }
-
 
 
 
