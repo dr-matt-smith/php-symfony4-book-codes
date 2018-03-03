@@ -1,0 +1,6 @@
+{% block collection_widget %}
+    <div class="collection_widget">
+        {% set type = type|default('string') %}
+        {{ block('form_widget_simple') }}
+    </div>
+{% endblock %}

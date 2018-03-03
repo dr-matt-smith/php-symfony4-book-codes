@@ -1,0 +1,39 @@
+{% form_theme form 'form/fields.html.twig' %}
+
+
+{{ form_start(form) }}
+    {#{{ form_widget(form) }}#}
+
+        {# name field  - default rendering #}
+        {{ form_row(form.name) }}
+
+        {# products field #}
+        <div>
+            Products for this Category:
+            <ul>
+            {% for product in form.vars.value.products %}
+                <li>
+                    <a href="{{ url('product_show', {'id':product.id}) }}">
+                        {{ product.id }} :: {{ product.description }}
+                    </a>
+                </li>
+            {% else %}
+                <li>
+                    (no products for this category)
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        {# hide select rendering of products in a comment #}
+        <!--
+        {{ form_widget(form.products) }}
+        -->
+
+    <button>{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
+{#notes:#}
+{#https://groups.google.com/forum/#!topic/symfony2/onor9uFte9E#}
+ {#{{ form.username.get('value') }}#}
+ {#{{ form.vars.value.username }}#}
