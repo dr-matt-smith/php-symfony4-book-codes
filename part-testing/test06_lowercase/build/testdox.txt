@@ -1,0 +1,12 @@
+App\Tests\Controller\DefaultController
+ [x] Homepage response code okay
+ [x] Homepage content contains hello world
+
+App\Test\Simple
+ [x] One plus one equals two
+
+App\Util\Test\Calculator
+ [x] Can create object
+ [x] Add one and one
+ [x] Additions with provider 
+
