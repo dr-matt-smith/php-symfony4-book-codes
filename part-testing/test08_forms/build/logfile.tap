@@ -1,0 +1,15 @@
+TAP version 13
+ok 1 - App\Tests\Controller\CalcControllerTest::testHomepageResponseCodeOkay
+ok 2 - App\Tests\Controller\CalcControllerTest::testHomepageContentContainsHelloWorld
+ok 3 - App\Tests\Controller\DefaultControllerTest::testHomepageResponseCodeOkay
+ok 4 - App\Tests\Controller\DefaultControllerTest::testHomepageContentContainsHelloWorld
+ok 5 - App\Test\SimpleTest::testOnePlusOneEqualsTwo
+ok 6 - App\Util\Test\CalculatorTest::testCanCreateObject
+ok 7 - App\Util\Test\CalculatorTest::testAddOneAndOne
+ok 8 - App\Util\Test\CalculatorTest::testAdditionsWithProvider with data set #0 (1, 1, 2)
+ok 9 - App\Util\Test\CalculatorTest::testAdditionsWithProvider with data set #1 (2, 2, 4)
+ok 10 - App\Util\Test\CalculatorTest::testAdditionsWithProvider with data set #2 (0, 1, 1)
+ok 11 - App\Util\Test\CalculatorTest::testDivideOneAndOne
+ok 12 - App\Util\Test\CalculatorTest::testDivideOneAndZero
+ok 13 - App\Util\Test\CalculatorTest::testDivideOneAndZeroAnnotation
+1..13
