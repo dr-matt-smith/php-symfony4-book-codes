@@ -10,8 +10,12 @@ composer create-project symfony/skeleton testing02_unit
 
 ## Projects for individual chapters / parts
 
+Part - security
+https://github.com/dr-matt-smith/php-symfony4-book-codes-security
+
 Part - associations
 https://github.com/dr-matt-smith/php-symfony4-book-codes-associations
 
 Part - testing
 https://github.com/dr-matt-smith/php-symfony4-book-codes-testing
+
