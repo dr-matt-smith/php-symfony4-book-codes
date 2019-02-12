@@ -17,7 +17,7 @@ Part - Forms
 
 Part - CRUD code generation
 
-- https://github.com/dr-matt-smith/https-github.com-dr-matt-smith-php-symfony4-book-codes-crud-generation
+- https://github.com/dr-matt-smith/php-symfony4-book-codes-crud-generation
 
 Part - Databases 
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-databases
