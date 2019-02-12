@@ -1,5 +1,6 @@
 # php-symfony4-book-codes
 
+The open souce project codes from my 3rd year Symfony classes (book forthcoming)
 
 1. create project
 composer create-project symfony/skeleton testing02_unit
