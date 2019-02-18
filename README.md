@@ -19,15 +19,22 @@ Part - CRUD code generation
 
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-crud-generation
 
+Part - SESSIONS
+
+- https://github.com/dr-matt-smith/php-symfony4-book-sessions
+
 Part - Databases 
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-databases
 
 Part - security
+
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-security
 
 Part - associations
+
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-associations
 
 Part - testing
+
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-testing
 
