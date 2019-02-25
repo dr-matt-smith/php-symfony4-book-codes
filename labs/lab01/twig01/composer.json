@@ -1,8 +1,0 @@
-{
-    "require": {
-        "twig/twig": "^2.4"
-    },
-    "scripts":{
-        "run":"php -S localhost:8000 -t public"
-    }
-}
