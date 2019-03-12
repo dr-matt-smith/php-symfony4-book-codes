@@ -38,6 +38,10 @@ Part - associations
 
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-associations
 
+Part - testing with Codeception
+
+- https://github.com/dr-matt-smith/php-symfony4-book-codes-testing-codeception
+
 Part - testing
 
 - https://github.com/dr-matt-smith/php-symfony4-book-codes-testing
